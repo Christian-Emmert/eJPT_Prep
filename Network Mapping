@@ -1,0 +1,74 @@
+Links
+-------------------
+https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html
+https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+http://nmap.org/download.html
+http://nmap.org/book/man.html
+http://nmap.org/book/osdetect.html
+http://tools.ietf.org/html/rfc792
+https://els-cdn.content-api.ine.com/2e4455e5-2ef8-4911-baa5-dd6d3cc49f41/index.html#
+
+fping
+-------------------
+fping -a -g IPRANGE
+
+nmap Ping Sweep Scan
+-------------------
+nmap -sn IPRANGE    Pingsweep Range
+nmap -iL FILE       Scan IP's via File
+> File should contain IP's like xxx.xxx.xxx.xxx or xxx.xxx.xxx.0-256 or xxx.xxx.xxx.0/24 or xxx.xxx.xxx.* WITHOUT ANY COMMA
+
+combined Pingscan with File: nmap -sn -sL FILE
+
+offline OS Enumeration
+-------------------
+http://lcamtuf.coredump.cx/p0f3/
+
+nmap OS Enumeration
+-------------------
+nmap -Pn -O IP
+> -Pn tells to ignore Ping, scan even if host doesn't reply to ping
+> -O is for OS enumeration
+nmap -Pn -O --osscan-limit IP
+> Limit OS detection / good, if scanning more hosts
+nmap -Pn -O --osscan-guess IP
+> Guess OS more aggressively
+
+nmap Port Scanning
+-------------------
+// 3 Way Hand Shake - SYN/SYN-ACK/ACK
+// if Port is closed - SYN/RST-ACK
+// nmap behavior with 3 Way Handshake - SYN/SYN-ACK/ACK/RST-ACK
+
+type of nmap Port Scanning
+-------------------
+-sS - Stealth Scan - SYN Scan
+-sT - TCP Connect Scan 
+-sV - Version Detection   // tcpwrapped means no data due connection closed
+-p - Port Scan
+> set specific port with -p 21,22,80 ...
+> scan all 0-65535 ports -p -
+> scan range of ports -p 100-1000
+--reason // see, why Port is closed
+
+typical ports to find / specify
+-------------------
+T:21        - FTP
+T:22        - SSH
+T:80        - HTTP
+T:443       - HTTPS
+T:445       - Windows SMB
+T:25        - SMTP
+T:137-139   - Windows NetBIOS
+T:1433-1434 - MSSQL Database
+T:3306      - MySQL Database
+T:8080,8443 - HTTP(s) Web Server or Proxy
+U:53        - DNS
+
+scanning more targets at once
+-------------------
+nmap <switch> <target 1> <target 2> <target n>
+nmap <switch> <target 1>/24
+nmap <switch> <target 1>*
+nmap <switch> <target 1>0-255
+nmap <switch> <target 1>1,3,7
