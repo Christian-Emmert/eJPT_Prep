@@ -177,4 +177,27 @@ UNION Based SQLi:
 > [...]' UNION SELECT user(), 'string 1',
 
 sqlmap:
-> 
+> -u <URL>
+> -r <file to read>
+> -p <parameter>
+> -dbs
+> --current-db
+> --current-user
+> --technique=
+  > U   UNION Based
+  > B   BOOLEAN
+  > E   Error-based
+  > S   Stacked
+  > T   Time-based blind
+  > Q   inline Queries
+> --method=
+  > PUT, POST, GET
+> -p <Proxy, this can be Burp on 127.0.0.1:8080>
+> --data=<POST string>
+> --cookie=
+> --user-agent=
+
+
+https://hack.me/
+
+
