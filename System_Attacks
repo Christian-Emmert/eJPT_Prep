@@ -93,6 +93,8 @@ dictionary attack:
 
 rules to perform john:
 > john -wordlist=<path to wordlist> -rules <file to crack>
+> /usr/share/john/*.py for formatting
+> /usr/share/john/office2john.py
 
 cracking with rainbow tables:
 > ophcrack    // for windows passwords
