@@ -29,4 +29,7 @@ msfconsole ssh brute force:
 > set rhosts
 > set username
 > set pass_file
+> set verbose true
+> set stop_on_success true
+> stop_on_success => true
 > run
