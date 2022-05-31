@@ -1,1 +1,7 @@
+https://wiki.skullsecurity.org/index.php/Passwords
 
+THC Hydra:
+> -L    // list of usernames in file
+> -P    // list of passwords in file
+> -l    // list of usernames, separated via comma
+> -p    // list of passwords, separated via comma
