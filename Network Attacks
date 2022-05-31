@@ -5,3 +5,17 @@ THC Hydra:
 > -P    // list of passwords in file
 > -l    // list of usernames, separated via comma
 > -p    // list of passwords, separated via comma
+> -t    // Tasks per host
+> -U    // Service moduledetails
+> -M    // multible Hosts to attack
+
+Crack HTTP form:
+> Login Form:
+  > look for method: GET or POST
+  > look for name parameter
+  
+http-post-form:
+> hydra -U http-post-form
+> hydra <URL> <service http-post-form> 
+  <login page "/login.php">:<user parameter "usr=">^USER^&<pass parameter "pass">^PASS^:<failed string - invalid credentials> -P <password list> -f <stop when creds found> -V   
+> hydra <ip> ssh -L <user file> -P <password file>
