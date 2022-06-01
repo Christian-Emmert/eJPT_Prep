@@ -137,6 +137,7 @@ MSFConsole:
   > search portscan
 > db_nmap [...]
   --script=smb-check-vulns.nse
+  > !!! allways check versions of application for vulns !!!
 http://www.metasploit.com/
   > show -h                                     // list all parameters
   > search <string>                             // search for module in metasploit
