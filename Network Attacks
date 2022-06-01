@@ -89,7 +89,7 @@ https://www.samba.org/
       -S <IP>      // Shares
       -P <IP>      // Password Policy
       -n           // nbtstat like windows
-      -s           // test shares
+      -s           // test shares (wordlist !!! CRACK THOSE HIDDEN USERS !!!)
     > samrdump.py
     /usr/share/doc/python3-impacket/examples/samrdump.py
       > samrdump.py <IP>
@@ -107,6 +107,11 @@ https://www.samba.org/
     > --script=smb-enum-shares
     > --script=smb-enum-users
     > --script=smb-brute
+    
+  > smbmap
+    > -H <IP>
+    > -P Port (445)
+    > -u "user" -p "pass"
     
 
 
