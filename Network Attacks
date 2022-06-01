@@ -85,6 +85,13 @@ https://www.samba.org/
     Linux:
     > smbclient //<IP>/IPC$ -N
     > enum4linux <ip>
+      -U <IP>      // Users
+      -S <IP>      // Shares
+      -P <IP>      // Password Policy
+      -n           // Null Session
+      -s           // test shares
+    > samrdump.py
+      > samrdump.py <IP>
   > !!! every share must be tested separately !!!
     Enum Tool for Windows:
     https://packetstormsecurity.com/search/?q=win32+enum&s=files
@@ -93,6 +100,12 @@ https://www.samba.org/
     > enum -P <IP>      // Password Policy
     https://packetstormsecurity.com/search/?q=winfo&s=files
     > winfo <IP> -n     // test Null Session
+    
+  > nmap Scan for Windows Shares:
+    > -sS -p 135,139,445
+    > --script=smb-enum-shares
+    > --script=smb-enum-users
+    > --script=smb-brute
     
 
 
