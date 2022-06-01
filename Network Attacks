@@ -55,6 +55,8 @@ NetBIOS:
   > \\Computername\admin$   // install directory
   > \\Computername\ipc$     // inter-process communication
   
+  
+  
 Null Session:
 ------------------
 https://www.samba.org/
@@ -113,5 +115,32 @@ https://www.samba.org/
     > -P Port (445)
     > -u "user" -p "pass"
     
+    
+    
+ARP Poisoning:
+------------------
+arpspoof:
+  > echo 1 > /proc/sys/net/ipv4/ip_forward
+  > arpspoof -i <interface> -t <target> -r <host>
+  > Wireshark Mitschnitt
 
 
+
+MSFConsole:
+------------------
+> msfconsole
+http://www.metasploit.com/
+  > show -h                                     // list all parameters
+  > search <string>                             // search for module in metasploit
+  > search <string 1> <string 2> <string n>     // gives back foundings of all strings
+  > use <path to exploit>
+  > back                                        // goes out of the module
+  > info                                        // provides info for the module selected
+  > show options                                // show options, which can be set
+  > set <eg RHOST>                              // set value for the module selected
+  
+  > show payloads
+  > set payload <path to payload module>
+  > set <eg LPORT>
+  > exploit
+  
