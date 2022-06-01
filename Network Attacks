@@ -88,9 +88,10 @@ https://www.samba.org/
       -U <IP>      // Users
       -S <IP>      // Shares
       -P <IP>      // Password Policy
-      -n           // Null Session
+      -n           // nbtstat like windows
       -s           // test shares
     > samrdump.py
+    /usr/share/doc/python3-impacket/examples/samrdump.py
       > samrdump.py <IP>
   > !!! every share must be tested separately !!!
     Enum Tool for Windows:
