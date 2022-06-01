@@ -128,7 +128,15 @@ arpspoof:
 
 MSFConsole:
 ------------------
+> msfupdate
+> service postgresql start
 > msfconsole
+> use arp_sweep
+  > set RHOSTS <IP/Range_CIDR>
+  > run
+  > search portscan
+> db_nmap [...]
+  --script=smb-check-vulns.nse
 http://www.metasploit.com/
   > show -h                                     // list all parameters
   > search <string>                             // search for module in metasploit
@@ -143,4 +151,6 @@ http://www.metasploit.com/
   > set payload <path to payload module>
   > set <eg LPORT>
   > exploit
+  
+
   
