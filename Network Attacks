@@ -206,6 +206,7 @@ Blind Remote Code Execution
 Shells:
 ------------------
 https://rosettacode.org/wiki/Execude_a_system_command
+https://pentestmonkey.net/
 > webshell
   > php
     > <html>
@@ -217,4 +218,5 @@ https://rosettacode.org/wiki/Execude_a_system_command
       ?>
       </html>
       
+> post/multi/manage/shell_to_meterpreter
 
