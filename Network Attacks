@@ -175,6 +175,7 @@ http://www.metasploit.com/
       > run autoroute -s <IP of new Subnet> -n <Subnet Mask>  
   > portfwd 
     > portfwd add -l <listening port> -p <remote port> -r <target ip>
+    > scan localhost <listening port> to scan the target port
   
   > search hashdump
   
