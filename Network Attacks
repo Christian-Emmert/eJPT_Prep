@@ -176,6 +176,7 @@ http://www.metasploit.com/
   > portfwd 
     > portfwd add -l <listening port> -p <remote port> -r <target ip>
     > scan localhost <listening port> to scan the target port
+    > use modules again with remote ip and original port
   
   > search hashdump
   
