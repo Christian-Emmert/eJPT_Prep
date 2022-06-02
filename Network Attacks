@@ -172,7 +172,9 @@ http://www.metasploit.com/
   
   > autoroute:
     > in meterpreter shell:
-      > run autoroute -s <IP of new Subnet> -n <Subnet Mask>
+      > run autoroute -s <IP of new Subnet> -n <Subnet Mask>  
+  > portfwd 
+    > portfwd add -l <listening port> -p <remote port> -r <target ip>
   
   > search hashdump
   
