@@ -177,6 +177,12 @@ http://www.metasploit.com/
     > portfwd add -l <listening port> -p <remote port> -r <target ip>
     > scan localhost <listening port> to scan the target port
     > use modules again with remote ip and original port
+  > socks_proxy
+    > use auxiliary/server/socks_proxy
+    > set VERSION 4a
+    > set SRVPORT 9050
+    > run -j
+    > proxychains nmap -sT -P0 <target ip>
   
   > search hashdump
   
