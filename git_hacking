@@ -3,3 +3,8 @@
   > git clone http://<IP or Domain>/projects/[...]
   > ! git log !
   > git diff <commit 1> <commit 2>
+  > make changes to the files
+  > git status    // shows modified files
+  > git add .
+  > git commit -m "<String>" --author "<author name with E-Mail>"
+  > git push    // specify user with password
