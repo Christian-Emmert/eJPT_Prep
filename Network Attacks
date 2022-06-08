@@ -278,4 +278,4 @@ https://dzmitry-savitski.github.io/2018/03/groovy-reverse-and-bind-shell
   
 > env_keep+=LD_PRELOAD privilege escalation:
   https://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/
-
+  at sudo LD_PRELOAD=/tmp/shell.so ... use the permitteded sudo command from sudo -l
