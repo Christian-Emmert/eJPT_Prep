@@ -1,0 +1,13 @@
+use Syntax:
+
+reqirements to install:
+sudo apt-get update && sudo apt-get -y install slapd ldap-utils && sudo systemctl enable slapd
+
+configure:
+sudo dpkg-reconfigure -p low slapd
+> omit ldap - no
+> DNS Name & Organisation Name
+> enter password
+> Database backend: MDB
+> databse removed when slapd purged: no
+> move old databases: yes
