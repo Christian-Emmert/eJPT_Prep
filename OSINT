@@ -1,8 +1,0 @@
-Google Dorking
---------------
-site: company.site
-
-https://dnsdumpster.com/
-
-https://github.com/aboul3la/Sublist3r
-python2 Sublist3r.py -d company.site
