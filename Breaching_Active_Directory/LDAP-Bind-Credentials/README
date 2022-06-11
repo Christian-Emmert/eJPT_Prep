@@ -14,3 +14,6 @@ sudo dpkg-reconfigure -p low slapd
 
 patch LDAP:
 > sudo ldapmodify -Y EXTERNAL -H ldapi:// -f ./olcSaslSecProps.ldif && sudo service slapd restart
+
+run attack:
+> sudo tcpdump -SX -i <interface> tcp port 389
