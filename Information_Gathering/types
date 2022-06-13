@@ -1,0 +1,13 @@
+passive:
+-------------
+
+> no direct interaction with the target
+> public available information
+> IP Adress of the public facing server
+> Port of the public server 
+
+active:
+-------------
+
+> Portscan
+> require authorization !
