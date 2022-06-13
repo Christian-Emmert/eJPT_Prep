@@ -1,0 +1,21 @@
+GET
+------------------
+GET /index.html?course=PTS HTTP/1.1
+Host: example.site
+
+POST
+------------------
+POST /index.php HTTP/1.1
+Host: example.site
+
+username=john&password=doe
+
+HEAD
+------------------
+HEAD /index.php HTTP/1.1
+Host: example.site
+
+PUT
+------------------
+PUT <path to upload on server> HTTP/1.1
+Host: example.site
