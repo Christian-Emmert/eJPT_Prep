@@ -3,11 +3,17 @@ passive:
 
 > no direct interaction with the target
 > public available information
-> IP Adress of the public facing server
+> IP Adress / DNS of the public facing server
 > Port of the public server 
+
+> ownership information of Domain
+> E-Mail Addresses / Social Media
+> Web techonlogies used on target
+> subdomains
 
 active:
 -------------
 
-> Portscan
+> Portscan open ports
 > require authorization !
+> infrastructure of target
