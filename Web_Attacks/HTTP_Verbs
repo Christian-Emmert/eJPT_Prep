@@ -19,3 +19,13 @@ PUT
 ------------------
 PUT <path to upload on server> HTTP/1.1
 Host: example.site
+
+DELETE
+------------------
+DELETE <path to upload on server> HTTP/1.1
+Host: example.site
+
+OPTIONS
+------------------
+OPTIONS / HTTP/1.1
+Host: example.site
