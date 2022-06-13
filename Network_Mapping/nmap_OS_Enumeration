@@ -1,0 +1,7 @@
+nmap -Pn -O IP
+> -Pn tells to ignore Ping, scan even if host doesn't reply to ping
+> -O is for OS enumeration
+nmap -Pn -O --osscan-limit IP
+> Limit OS detection / good, if scanning more hosts
+nmap -Pn -O --osscan-guess IP
+> Guess OS more aggressively
