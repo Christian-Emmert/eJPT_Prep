@@ -1,3 +1,12 @@
 // 3 Way Hand Shake - SYN/SYN-ACK/ACK
 // if Port is closed - SYN/RST-ACK
 // nmap behavior with 3 Way Handshake - SYN/SYN-ACK/ACK/RST-ACK
+
+-sS - Stealth Scan - SYN Scan
+-sT - TCP Connect Scan 
+-sV - Version Detection   // tcpwrapped means no data due connection closed
+-p - Port Scan
+> set specific port with -p 21,22,80 ...
+> scan all 0-65535 ports -p -
+> scan range of ports -p 100-1000
+--reason // see, why Port is closed
