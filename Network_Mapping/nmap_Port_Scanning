@@ -2,6 +2,8 @@
 // if Port is closed - SYN/RST-ACK
 // nmap behavior with 3 Way Handshake - SYN/SYN-ACK/ACK/RST-ACK
 
+type of nmap Port Scanning
+-------------------
 -sS - Stealth Scan - SYN Scan
 -sT - TCP Connect Scan 
 -sV - Version Detection   // tcpwrapped means no data due connection closed
@@ -10,3 +12,25 @@
 > scan all 0-65535 ports -p -
 > scan range of ports -p 100-1000
 --reason // see, why Port is closed
+
+typical ports to find / specify
+-------------------
+T:21        - FTP
+T:22        - SSH
+T:80        - HTTP
+T:443       - HTTPS
+T:445       - Windows SMB
+T:25        - SMTP
+T:137-139   - Windows NetBIOS
+T:1433-1434 - MSSQL Database
+T:3306      - MySQL Database
+T:8080,8443 - HTTP(s) Web Server or Proxy
+U:53        - DNS
+
+scanning more targets at once
+-------------------
+nmap <switch> <target 1> <target 2> <target n>
+nmap <switch> <target 1>/24
+nmap <switch> <target 1>*
+nmap <switch> <target 1>0-255
+nmap <switch> <target 1>1,3,7
