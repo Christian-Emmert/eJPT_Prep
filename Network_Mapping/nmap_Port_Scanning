@@ -1,0 +1,3 @@
+// 3 Way Hand Shake - SYN/SYN-ACK/ACK
+// if Port is closed - SYN/RST-ACK
+// nmap behavior with 3 Way Handshake - SYN/SYN-ACK/ACK/RST-ACK
