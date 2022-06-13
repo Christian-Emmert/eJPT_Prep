@@ -1,0 +1,10 @@
+> username of 8 characters = 8 bytes
+> if maximum of 256 characters not set, buffer overflow is possible
+> Buffers are stored in data structures, called memory stack
+> push adds element to stack
+> pop removes last inserted element
+> in modern stacks in arrays:
+  > int A[3] = {2, 3, 4};       // bottom
+  > int B[2] = {7, 9};          // topped up
+> if attacker can write in B, an overflow to A is possible
+  > int overflow[4] = {1, 1, 0, 0};
