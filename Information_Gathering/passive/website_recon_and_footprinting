@@ -1,7 +1,5 @@
 > IP Address
 ----------------
-
-
 > Directories
 ----------------
 > Names
@@ -14,3 +12,28 @@
 ----------------
 > Web Technologies used
 ----------------
+
+
+> host <Website> - gives IP (v4&v6) addresses and mailserver of website
+
+// whatis <command> shows information about the command
+> [...]/robots.txt file - see possible crawls
+> [...]/sitemap.xml - organizized whay for search engines, like author or categories
+> firefox add-ons:
+  > builtwith - what is running on that website / plugins like social media
+  > wappalyzer
+> whatweb <Website> - technologies used on website and shows redirects and uncommon headers
+> httrack.com - Download a website to local directory // webhttrack as command
+
+> whois <website>
+  > info about DNSSEC
+  > info about owner
+
+> netcraft.com
+  > Services / Internet Data Mining / What's that site running?
+  
+> dnsrecon - check NS for zone-tranfer
+  > dnsrecon -d <Domain>
+    > NS Addresses
+    > IP Addresses (A/AAAA)
+    > MX Mail Server
