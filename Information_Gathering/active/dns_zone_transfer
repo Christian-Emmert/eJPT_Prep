@@ -1,0 +1,24 @@
+A       IPv4
+AAAA    IPv6
+NS      nameserver
+MX      mailserver
+CNAME   domain alias
+TXT     text record
+HINFO   host information
+SOA     domain authority
+SRV     service record
+PTR     pointer IP to hostname
+
+dnsrecon -d <domain>
+
+dnsenum <domain>
+  > passive information
+  > try of zonetransfer 
+
+dig
+  > axfr @<nameserver from dnsenum> <domain>
+  
+fierce
+  > -dns <domain>
+
+/ect/hosts    // hostfile for domain resolve
