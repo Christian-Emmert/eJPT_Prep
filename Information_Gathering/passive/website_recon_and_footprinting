@@ -41,4 +41,24 @@
     
 > dnsdumpster.com
 
+> wafw00f WAF detection
+https://github.com/EnableSecurity/wafw00f
+https://github.com/EnableSecurity/wafw00f/wiki/   // commands
+  > wafw00f -l  // list of possible firewalls
+    > wafw00f <domain>  // enumerate domain for WAF
+    
+> Sublist3r Subdomain Enumeration
+https://github.com/aboul3la/Sublist3r
+Short Form 	Long Form 	Description
+-d 	--domain 	    Domain name to enumerate subdomains of
+-b 	--bruteforce 	Enable the subbrute bruteforce module
+-p 	--ports 	    Scan the found subdomains against specific tcp ports
+-v 	--verbose 	  Enable the verbose mode and display results in realtime
+-t 	--threads 	  Number of threads to use for subbrute bruteforce
+-e 	--engines 	  Specify a comma-separated list of search engines
+-o 	--output 	    Save the results to text file
+-h 	--help 	      show the help message and exit
+  > sublist3r -d <domain> -e <google,yahoo> 
+    > VPN if Google is getting blocked or use differnet search engine
+    
 
