@@ -61,4 +61,18 @@ Short Form 	Long Form 	Description
   > sublist3r -d <domain> -e <google,yahoo> 
     > VPN if Google is getting blocked or use differnet search engine
     
-
+> Google Dorks / Google Hacking
+https://www.exploit-db.com/google-hacking-database
+change category to filter 
+  > site:<domain>             // results limited to domain
+  > inurl:<string>            // limit results to string in url
+  > site:*.<domain>           // enumerate subdomains by google
+    > combined with inurl:<string>
+  > filetype:pdf              // show only results with pdf
+  > intitle:index of          // directory listing on webservers
+  > cache:<domain>            // google webchache history search
+  > inurl_auth_user_file.txt  // leaked passwords 
+  > inurl:passwd.txt          // leaked user information 
+https://archive.org/web/goo
+  
+  
