@@ -1,2 +1,0 @@
-dig
-  > axfr @<nameserver from dnsenum> <domain>

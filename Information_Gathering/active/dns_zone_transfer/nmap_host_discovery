@@ -1,6 +1,0 @@
-nmap Ping Sweep
-  > nmap -sn (No Port Scan, only show live hosts)
-  > sudo nmap -sn <local IP>/<CIDR>
-  
-netdiscover <sending ARP Requests>
-  > sudo netdiscover -i <Interface> -r <local IP>/<CIDR>
