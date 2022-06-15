@@ -1,0 +1,18 @@
+  > Wireshark
+    > select interfaces
+    > IP is at MAC
+    > Statistics - Endpoints
+  > ARP-Scan
+    > sudo arp-scan -I <Interface> -g <local IP>/<CIDR>
+  > Ping
+    > ping <IP>
+    > packets transmitted, received, packet loss, Error Message
+  > fping
+    > fping -I <Interface> -g <local IP>/<CIDR> -a (everything alive)
+    > stderr 2 to /dev/null (2>/dev/null)
+  > nmap
+    > -sn (Ping Sweep Scan) <IP>/<CIDR>
+  > zenmap (GUI Version of nmap)
+    > Target like nmap (<IP>/<CIDR>)
+    > Profile Ping Scan
+   
