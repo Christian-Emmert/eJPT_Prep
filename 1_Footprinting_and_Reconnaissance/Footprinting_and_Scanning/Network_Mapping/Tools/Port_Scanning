@@ -1,0 +1,39 @@
+Purpose
+----------
+  > Identify Operation System
+    > Signature
+    > Services
+    > Confidence in %
+  > Identify Services
+    > Try to connect to ports
+  > Connect to TCP
+    > SYN SYN/ACK ACK RST/ACK         normal TCP port scan
+    > SYN RST/ACK                     closed
+    > SYN SYN/ACK RST                 stealth scan
+    > SYN SYN/ACK ACK Banner RST/ACK  Service Version
+  > Conenct to UDP
+    > Slower
+    > Open/filtered
+    > Can be speed up via flags
+    
+nmap
+----------
+> SYN Scan -sS
+> TCP Scan -sA
+> specify port -p
+> Service -sV
+> Scripts -sC
+> OS Detection -O
+> Aggressive -A
+
+nmap -iL <List File>
+  > append with -sV -O -sC for OS and Service Info and default Scripts
+  
+> nmap automater  
+https://github.com/21y4d/nmapAutomator
+> masscan
+https://github.com/robertdavidgraham/masscan
+> rustscan
+https://github.com/RustScan/RustScan
+> autorecon
+https://github.com/Tib3rius/AutoRecon
