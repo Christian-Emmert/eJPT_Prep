@@ -1,4 +1,0 @@
-> use arp_sweep
-  > set RHOSTS <IP/Range_CIDR>
-  > run
-  > search portscan

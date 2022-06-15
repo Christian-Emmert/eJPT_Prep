@@ -1,5 +1,0 @@
-http://www.monkey.org/~dugsong/dsniff/
-> all possible Meterpreter payloads: search meterpreter
-> set payload [...]/meterpreter/[...]
-> bind shell:     process on server waits for connections of attacker
-> reverse shell:  connects back to the attacker -> firewall rule evasion
