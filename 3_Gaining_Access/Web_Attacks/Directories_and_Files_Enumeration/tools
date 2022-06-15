@@ -1,0 +1,26 @@
+common file extentions for backups: .bak .old .txt .xxx
+
+Dirbuster
+------------------
+https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+
+Dirb
+------------------
+dirb <target url> <path to wordlist>
+-a "user agent"
+> http://useragentstring.com/pages/useragentstring.php
+-p Proxy through Burp
+> dirb <target url> -p http://127.0.0.1:8080
+-c Cookie
+> dirb <target url> -c "COOKIE:XYZ"
+-u authentitaction
+> dirb <target url> -u "admin:password"
+-H header
+> dirb <target url> -H "MyHeader: MyContent"
+-r no recurse
+-z time to wait in milliseconds
+-S hide process only show foundings
+-X extensions to specify
+> dirb <target url> ".php,.bak"
+-x path to file with extensions
+-o save findings in file

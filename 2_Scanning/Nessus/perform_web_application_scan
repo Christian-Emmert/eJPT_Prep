@@ -1,0 +1,16 @@
+https://localhost:8834/
+> enter target without http://
+> Web Application Scan for tempalte
+> Advanced Scan:
+  > Discovery
+    > set targets without http://
+    > Host Discovery:
+      > use fast network discovery, uncheck test local nessus host
+    > Port Scanning:
+      > check TCP
+  > Assessment
+    > General
+      > Perform thorough tests
+    > Web Applications
+      > Scan web Applications
+  > Safe

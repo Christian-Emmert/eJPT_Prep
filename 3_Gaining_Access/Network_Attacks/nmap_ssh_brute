@@ -1,0 +1,2 @@
+nmap ssh-brute:
+> nmap -p 22 --script ssh-brute --script-args userdb=user.txt,/usr/share/nmap/nselib/data/passwords.lst <target>

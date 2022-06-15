@@ -1,0 +1,2 @@
+> db_nmap [...]
+  --script=smb-check-vulns.nse
