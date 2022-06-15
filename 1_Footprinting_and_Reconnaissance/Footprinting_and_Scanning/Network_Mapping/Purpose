@@ -1,0 +1,48 @@
+Scope
+------------
+> reduce risks
+> benfit
+> what will provide value
+> way of connection (VPN, Plug into network)
+Discovery
+------------
+> Physical Access
+  > Physical Security
+  > OSINT
+    > passive gathering
+  > Social Engineering
+> Sniffing
+  > passive Recon
+    > tcpdump
+      > Email, Websites, [...]
+  > watch network trafic
+    > MAC Addresses
+> ARP
+  > resolve IP Addresses
+  > ARP table
+> ICMP
+  > Traceroute
+  > Ping
+    > dropped packets
+    > Typ 8 - echo Request
+    > Typ 0 - echo Reply
+    
+> Tools
+  > Wireshark
+    > select interfaces
+    > IP is at MAC
+    > Statistics - Endpoints
+  > ARP-Scan
+    > sudo arp-scan -I <Interface> -g <local IP>/<CIDR>
+  > Ping
+    > ping <IP>
+    > packets transmitted, received, packet loss, Error Message
+  > fping
+    > fping -I <Interface> -g <local IP>/<CIDR> -a (everything alive)
+    > stderr 2 to /dev/null (2>/dev/null)
+  > nmap
+    > -sn (Ping Sweep Scan) <IP>/<CIDR>
+  > zenmap (GUI Version of nmap)
+    > Target like nmap (<IP>/<CIDR>)
+    > Profile Ping Scan
+   
