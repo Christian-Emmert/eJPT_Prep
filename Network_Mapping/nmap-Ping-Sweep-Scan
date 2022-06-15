@@ -1,5 +1,0 @@
-nmap -sn IPRANGE    Pingsweep Range
-nmap -iL FILE       Scan IP's via File
-> File should contain IP's like xxx.xxx.xxx.xxx or xxx.xxx.xxx.0-256 or xxx.xxx.xxx.0/24 or xxx.xxx.xxx.* WITHOUT ANY COMMA
-
-combined Pingscan with File: nmap -sn -sL FILE
