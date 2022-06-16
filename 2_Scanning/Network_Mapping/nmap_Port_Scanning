@@ -12,6 +12,7 @@ type of nmap Port Scanning
 > scan all 0-65535 ports -p -
 > scan range of ports -p 100-1000
 --reason // see, why Port is closed
+--script=discovery  // for open/filtered udp ports
 
 typical ports to find / specify
 -------------------
