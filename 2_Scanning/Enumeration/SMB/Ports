@@ -1,0 +1,5 @@
+> File Share
+> Ports 135,139,445
+> 135 RPC
+> 139 NetBIOS
+> 445 SMB
