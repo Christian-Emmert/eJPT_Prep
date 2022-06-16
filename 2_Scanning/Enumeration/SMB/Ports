@@ -3,3 +3,6 @@
 > 135 RPC
 > 139 NetBIOS
 > 445 SMB
+
+> net use * /delete // delete all smb shares binded
+> net use Z: \\<IP>\C$ <password> /user:<username>    // bind share via cmd
