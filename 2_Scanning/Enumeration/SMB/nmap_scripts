@@ -1,0 +1,20 @@
+-p 445 --script smb-protocols    // what protocol is running
+--script smb-security-mode       // accounts, message signing
+--script smb-enum-sessions       // logged in users 
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // session information as logged in user
+--script smb-enum-shares         // access to shares 
+  IPC$  = NULL Session
+  print = printer information
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // share informations as logged in user
+--script smb-enum-users
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // user informations 
+--script smb-server-stats
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // server status information, like send and received bytes, logins attemps, [...]
+--script smb-enum-domains
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // domain info, user info, password info (complexity)
+--script smb-enum-groups
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // groups info with users, who can do admin things
+--script smb-enum-services
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // service infos
+--script smb-enum-shares,smb-ls
+  --script-args smbusername=<username> smbpassword=<password> <ip>      // shares and listing
