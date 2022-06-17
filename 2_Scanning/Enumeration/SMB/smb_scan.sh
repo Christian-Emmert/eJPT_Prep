@@ -44,10 +44,20 @@ rm -rf $target;
 mkdir -p $target;
 
 ###
-# smb-protocols
+# nmap OS enumeration
 ###
 
 touch $target/passive_enum.txt
+printf "${GREEN}nmap OS enumeration:${NC}\n"                                                                                    >> $target/passive_enum.txt
+echo ""                                                                                                                         >> $target/passive_enum.txt
+echo "nmap OS enumeration ..."
+nmap -Pn -O $target                                                                                                             >> $target/passive_enum.txt
+echo ""                                                                                                                         >> $target/passive_enum.txt
+
+###
+# smb-protocols
+###
+
 printf "${GREEN}nmap smb-protocols:${NC}\n"                                                                                     >> $target/passive_enum.txt
 echo ""                                                                                                                         >> $target/passive_enum.txt
 echo "nmap smb-protocols ..."
@@ -153,5 +163,19 @@ if [[ $trigger_nmap_creds -eq 0 ]]; then
   nmap -p 445 -Pn --script=smb-enum-shares,smb-ls $target                                                                       >> $target/passive_enum.txt
 else
   nmap -p 445 -Pn --script=smb-enum-shares,smb-ls --script-args=smbusername=$smb_username,smbpassword=$smb_password $target     >> $target/passive_enum.txt
+fi
+echo ""                                                                                                                         >> $target/passive_enum.txt
+
+###
+# enum4linux
+###
+
+printf "${GREEN}enum4linux enumeration:${NC}\n"                                                                                 >> $target/passive_enum.txt
+echo ""                                                                                                                         >> $target/passive_enum.txt
+echo "enum4linux enumeration ..."
+if [[ $trigger_nmap_creds -eq 0 ]]; then
+  enum4linux -a $target                                                                                                         >> $target/passive_enum.txt 2>/dev/null
+else
+  enum4linux -a -u $smb_username -p $smb_password $target                                                                       >> $target/passive_enum.txt 2>/dev/null
 fi
 echo ""                                                                                                                         >> $target/passive_enum.txt
