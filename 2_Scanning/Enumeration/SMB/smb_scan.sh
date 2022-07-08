@@ -62,9 +62,9 @@ printf "${GREEN}nmap smb-protocols:${NC}\n"                                     
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-protocols ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-protocols $target                                                                                >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-protocols $target                                                                                >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-protocols --script-args=smbusername=$smb_username,smbpassword=$smb_password $target              >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-protocols --script-args smbusername=$smb_username,smbpassword=$smb_password $target              >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -76,9 +76,23 @@ printf "${GREEN}nmap smb-security-mode:${NC}\n"                                 
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-security-mode ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-security-mode $target                                                                            >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-security-mode $target                                                                            >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-security-mode --script-args=smbusername=$smb_username,smbpassword=$smb_password $target          >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-security-mode --script-args smbusername=$smb_username,smbpassword=$smb_password $target          >> $target/smb_enum.txt
+fi
+echo ""                                                                                                                         >> $target/smb_enum.txt
+
+###
+# smb-enum-sessions
+###
+
+printf "${GREEN}nmap smb-enum-sessions:${NC}\n"                                                                                 >> $target/smb_enum.txt
+echo ""                                                                                                                         >> $target/smb_enum.txt
+echo "nmap smb-enum-sessions ..."
+if [[ $trigger_nmap_creds -eq 0 ]]; then
+  nmap -p 445 -Pn --script smb-enum-sessions $target                                                                            >> $target/smb_enum.txt
+else
+  nmap -p 445 -Pn --script smb-enum-sessions --script-args smbusername=$smb_username,smbpassword=$smb_password $target          >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -92,7 +106,7 @@ echo "nmap smb-enum-shares ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
   nmap -p 445 -Pn --script=smb-enum-shares $target                                                                              >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-enum-shares --script-args=smbusername=$smb_username,smbpassword=$smb_password $target            >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script=smb-enum-shares --script-args smbusername=$smb_username,smbpassword=$smb_password $target            >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -104,9 +118,9 @@ printf "${GREEN}nmap smb-enum-users:${NC}\n"                                    
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-enum-users ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-enum-users $target                                                                               >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-users $target                                                                               >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-enum-users --script-args=smbusername=$smb_username,smbpassword=$smb_password $target             >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-users --script-args smbusername=$smb_username,smbpassword=$smb_password $target             >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -118,9 +132,9 @@ printf "${GREEN}nmap smb-server-stats:${NC}\n"                                  
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-server-stats ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-server-stats $target                                                                             >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-server-stats $target                                                                             >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-server-stats --script-args=smbusername=$smb_username,smbpassword=$smb_password $target           >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-server-stats --script-args smbusername=$smb_username,smbpassword=$smb_password $target           >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -132,9 +146,9 @@ printf "${GREEN}nmap smb-enum-domains:${NC}\n"                                  
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-enum-domains ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-enum-domains $target                                                                             >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-domains $target                                                                             >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-enum-domains --script-args=smbusername=$smb_username,smbpassword=$smb_password $target           >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-domains --script-args smbusername=$smb_username,smbpassword=$smb_password $target           >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -146,9 +160,9 @@ printf "${GREEN}nmap smb-enum-groups:${NC}\n"                                   
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-enum-groups ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-enum-groups $target                                                                              >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-groups $target                                                                              >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-enum-groups --script-args=smbusername=$smb_username,smbpassword=$smb_password $target            >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-groups --script-args smbusername=$smb_username,smbpassword=$smb_password $target            >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
@@ -160,9 +174,9 @@ printf "${GREEN}nmap smb-enum-shares,smb-ls:${NC}\n"                            
 echo ""                                                                                                                         >> $target/smb_enum.txt
 echo "nmap smb-enum-shares,smb-ls ..."
 if [[ $trigger_nmap_creds -eq 0 ]]; then
-  nmap -p 445 -Pn --script=smb-enum-shares,smb-ls $target                                                                       >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-shares,smb-ls $target                                                                       >> $target/smb_enum.txt
 else
-  nmap -p 445 -Pn --script=smb-enum-shares,smb-ls --script-args=smbusername=$smb_username,smbpassword=$smb_password $target     >> $target/smb_enum.txt
+  nmap -p 445 -Pn --script smb-enum-shares,smb-ls --script-args smbusername=$smb_username,smbpassword=$smb_password $target     >> $target/smb_enum.txt
 fi
 echo ""                                                                                                                         >> $target/smb_enum.txt
 
