@@ -1,0 +1,9 @@
+usage:
+----------------------
+
+smbmap -u <user> -p "" (NULL-Session) -d . -H <Host>                          // check NULL-Session
+smbmap -u <user> -p <password> -x 'ipconfig' -H <Host>                        // -x runs commands
+smbmap -u <user> -p <password> -L -H <Host>                                   // -L lists drives
+smbmap -u <user> -p <password> -r <'Path of Share'> -H <Host>                 // dir or ls of share
+smbmap -u <user> -p <password> --upload <'file'> <'Path of Share'> -H <Host>  // uploads file to share
+smbmap -u <user> -p <password> --download <'Path of Share'> -H <Host>         // download file from share
