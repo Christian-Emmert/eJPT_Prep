@@ -1,0 +1,6 @@
+usage:
+--------------------------
+
+nmblookup -A <IP>                   // lookup groups via IP
+smbclient -L <IP> -N                // look for NULL Sessions on Victim
+rpcclient -U <username> "" -N <IP>  // NULL Session Connect
