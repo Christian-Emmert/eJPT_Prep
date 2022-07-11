@@ -1,5 +1,6 @@
 usefull commands:
 -----------------
 
-> srvinfo         // OS Version
-> enumdomusers    // list users
+> srvinfo                   // OS Version
+> enumdomusers              // list users
+> lookupnames <username>    // SID of User
