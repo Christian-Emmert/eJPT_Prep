@@ -1,0 +1,4 @@
+usefull commands:
+-----------------
+
+> smbclient -L <IP> -N        // NULL Session
