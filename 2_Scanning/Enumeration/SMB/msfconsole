@@ -1,2 +1,5 @@
 > auxiliary/scanner/smb/smb2
 > auxiliary/scanner/smb/smb_enumshares
+> auxiliary/scanner/smb/smb_login
+  > set pass_file <wordlist>
+  > set smbuser <username>
