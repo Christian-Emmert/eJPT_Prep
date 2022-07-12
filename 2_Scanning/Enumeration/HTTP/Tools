@@ -4,8 +4,9 @@ Tools:
 > whatweb <IP>                                    // Info about Server
 > http <IP>                                       // HTTP Header Info + Body
 > dirb http://<IP>                                // Website crawler - Directories
+  > <wordlist>                                    // use wordlist for crawl
 > browsh --startup-url http://<IP>/<Directory>    // website on command line
-
+> lynx http://<IP>                                // website on command line
 
 nmap HTTP scripts:
 ---------------
@@ -14,3 +15,14 @@ nmap HTTP scripts:
 > nmap -p 80 <IP> --script http-headers                                                         // header information
 > nmap -p 80 <IP> --script http-methods --script-args http-methods.url-path=<directory>         // supported methods
 > nmap -p 80 <IP> --script http-webdav-scan --script-args http-methods.url-path=/webdav/        // webdav information
+> nmap -p 80 <IP> --script banner
+> msfconsole
+  > auxiliary/scanner/http/http_version
+  > auxiliary/scanner/http/brute_dirs       // website crawl brute-force
+  > auxiliary/scanner/http/robots_txt       // robots.txt       
+> curl http://<IP>/<page>
+  > header information
+> wget http://<IP>/<File>
+  > download file
+  
+/usr/share/metasploit-framework/data/wordlists/directory.txt
