@@ -3,3 +3,9 @@
 > auxiliary/scanner/smb/smb_login
   > set pass_file <wordlist>
   > set smbuser <username>
+
+Pipe Check for linked Services:
+-------------------------------
+> auxiliary/scanner/smb/pipe_auditor
+  > set smbuser <username>
+  > set smbpass <password>
