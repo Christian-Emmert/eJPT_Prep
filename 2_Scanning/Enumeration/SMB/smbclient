@@ -8,3 +8,9 @@ NULL-Session Connect:
 -----------------
 
 > smbclient //<IP>/<Share> -N
+
+
+Login Connect:
+-----------------
+
+> smbclient -L <IP> -U <Username>
