@@ -14,3 +14,9 @@ nmap FTP Brute:
 ----------------
 
 > nmap <IP> --script ftp-brute --script-args userdb=<username_file> -p 21
+
+
+nmap FTP Anon:
+----------------
+
+> nmap <IP> --script ftp-anon -p 21
