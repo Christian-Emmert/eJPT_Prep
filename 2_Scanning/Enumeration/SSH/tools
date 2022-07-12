@@ -7,7 +7,7 @@ SSH Connect:
 SSH Auth Methods:
 ------------
 
-> nmap <IP> -p 22 --script ssh2-auth-methods --script-args="ssh.user=<username>"
+> nmap <IP> -p 22 --script ssh-auth-methods --script-args="ssh.user=<username>"
 
 
 
