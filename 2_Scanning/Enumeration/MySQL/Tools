@@ -24,7 +24,6 @@ msfconsole:
   
 > auxiliary/scanner/mysql/mysql_file_enum
   > set file_list /usr/share/metasploit-framework/data/wordlists/sensitive_files.txt
-  
 
 > nmap <IP> -sV -p 3306 --script=mysql-empty-password                                                     // check for users with empty passowrds
 > nmap <IP> -sV -p 3306 --script=mysql-info                                                               // version, capabilities
@@ -35,6 +34,16 @@ msfconsole:
   > --script-args="mysql-audit.username=<user>,mysql-audit.password='',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'"
 > nmap <IP> -sV -p 3306 --script=mysql-dump-hashes --script-args="username=<user>,password=''"
 > nmap <IP> -sV -p 3306 --script=mysql-query --script-args="query='SELECT COUNT(*) FROM <DATABASE>.<TABLE>;',username=<user>,password=''"
+
+brute force:
+> auxiliary/scanner/mysql/mysql_login
+  > set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+  > set verbose false
+  > set username root
+  > set stop_on_success true
+  
+> hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> mysql
+
 
 sha512crypt:
 ------------
