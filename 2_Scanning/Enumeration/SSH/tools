@@ -1,0 +1,29 @@
+SSH Connect:
+------------
+
+> ssh <user>@<ip>
+
+
+SSH Auth Methods:
+------------
+
+> nmap <IP> -p 22 --script ssh2-auth-methods --script-args="ssh.user=<username>"
+
+
+
+nmap SSH Algos:
+------------
+
+> nmap <IP> -p 22 --script ssh2-enum-algos
+
+
+nmap SSH Hostkey:
+------------
+
+> nmap <IP> -p 22 --script ssh-hostkey --script-args ssh_hostkey=full
+
+
+Banner Grab:
+------------
+
+> nc <IP> 22
