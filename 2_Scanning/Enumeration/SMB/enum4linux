@@ -1,6 +1,7 @@
 usefull commands:
 -----------------
-> -o    // OS Version
-> -S    // list Shares
-> -G    // list Groups
-> -i    // list Printers
+> -o                                // OS Version
+> -S                                // list Shares
+> -G                                // list Groups
+> -i                                // list Printers
+> -r -u <user> -p <pass> <target>   // users SIDs
