@@ -1,7 +1,0 @@
-Tools:
----------------
-
-> whatweb <IP>                                    // Info about Server
-> http <IP>                                       // HTTP Header Info + Body
-> dirb http://<IP>                                // Website crawler - Directories
-> browsh --startup-url http://<IP>/<Directory>    // website on command line
