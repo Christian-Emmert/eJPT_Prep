@@ -22,6 +22,9 @@ msfconsole:
   > username <username>
   > set password ""
   
+> auxiliary/scanner/mysql/mysql_file_enum
+  > set file_list /usr/share/metasploit-framework/data/wordlists/sensitive_files.txt
+  
 
 > nmap <IP> -sV -p 3306 --script=mysql-empty-password                                                     // check for users with empty passowrds
 > nmap <IP> -sV -p 3306 --script=mysql-info                                                               // version, capabilities
@@ -32,3 +35,7 @@ msfconsole:
   > --script-args="mysql-audit.username=<user>,mysql-audit.password='',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'"
 > nmap <IP> -sV -p 3306 --script=mysql-dump-hashes --script-args="username=<user>,password=''"
 > nmap <IP> -sV -p 3306 --script=mysql-query --script-args="query='SELECT COUNT(*) FROM <DATABASE>.<TABLE>;',username=<user>,password=''"
+
+sha512crypt:
+------------
+<username>:$6$<salt>$<hash>:[...]:::
