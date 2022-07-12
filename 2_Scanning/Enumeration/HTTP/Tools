@@ -5,3 +5,12 @@ Tools:
 > http <IP>                                       // HTTP Header Info + Body
 > dirb http://<IP>                                // Website crawler - Directories
 > browsh --startup-url http://<IP>/<Directory>    // website on command line
+
+
+nmap HTTP scripts:
+---------------
+
+> nmap -p 80 <IP> --script http-enum                                                            // common directories with version header
+> nmap -p 80 <IP> --script http-headers                                                         // header information
+> nmap -p 80 <IP> --script http-methods --script-args http-methods.url-path=<directory>         // supported methods
+> nmap -p 80 <IP> --script http-webdav-scan --script-args http-methods.url-path=/webdav/        // webdav information
