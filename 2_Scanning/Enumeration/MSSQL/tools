@@ -24,7 +24,7 @@ msfconsole:
   > set pass_file
   > set verbose false
   
-> auxiliary/admin/mssql/mssql_enum_logins
+> auxiliary/admin/mssql/mssql_enum_sql_logins
   > setg RHOSTS
   > set user_file
   > set pass_file
