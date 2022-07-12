@@ -14,3 +14,4 @@ Login Connect:
 -----------------
 
 > smbclient -L <IP> -U <Username>
+> smbclient //<IP>/<Share> -U <Username>
