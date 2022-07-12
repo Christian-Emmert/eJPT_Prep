@@ -3,4 +3,11 @@ usefull commands:
 
 > srvinfo                   // OS Version
 > enumdomusers              // list users
+> enumdomgroups             // list groups
 > lookupnames <username>    // SID of User
+
+
+NULL-Session Connect:
+-----------------
+
+> rpcclient -U "" -N <IP>
