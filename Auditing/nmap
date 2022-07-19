@@ -1,0 +1,10 @@
+Asset Management
+----------------
+
+> nmap <IP/CIDR>
+  > Hosts with Services
+  
+> nmap <IP> -A
+  > Aggessive Scan
+    > Service Scan, OS Scan, Traceroute, common Scripts Scan   
+> compare Result to Network Map
