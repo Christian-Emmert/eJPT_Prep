@@ -1,0 +1,25 @@
+> Security Content Automation Protocol (SCAP)
+> Security Technical Implementation Guides (STIGs)
+
+> Tools from the Defense Information Systems Agency (DISA)
+  > Guides and Tools for Standardization across Organisations
+
+
+> scc.exe (SCAP Tool)
+  > Start Scan (Local Scan)
+    > View Results
+      > Open Summary Viewer in OS default web browser
+      > Score and Compliance Status
+      > Results - Failed
+      > Fix Text
+      > Identifiec
+      
+> STIG Viewer.exe (STIG Tool)
+  > Checklist open
+    > 3 Type of CAT's
+  > import SCAP Scan results
+    > 3 Type of CAT's
+    
+> cmd.exe as admin
+  > LGPO.exe Tool
+    > LGPO.exe /g <Policies "{ID of Regulation File}">
