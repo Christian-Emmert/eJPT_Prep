@@ -1,0 +1,24 @@
+> Regualtions
+  > PCI DSS (Payment Card Industry Data Security Standard)
+    > card brands (credit cards)
+    > Payment Card Industry Security Standards Council
+    > increase controls to reduce credit card fraud
+  > HIPAA (Health Insurance Portability and Accountability Act of 1996)
+    > Protected Health Information
+    > US regulation
+    > final Security Standards in 20.02.2003
+      > Adminitrative Safeguards
+      > Physical Safeguards
+      > Technical Safeguards
+  > GDPR (General Data Protection Regulation)
+    > data protection and privacy law in EU and EEA (European Economic Area)
+    > appropriate technical and organizational measures to implement the data protection principles 
+  > CPPA (California Consumer Privacy Act)
+    > enhance privacy rights and consumer protection of California
+    > Companies that become victims of data theft or other data security breaches can be ordered in civil class action lawsuits to pay statutory damages
+    > Liability may also apply in respect of businesses in overseas countries who ship items into California
+  > SOX (Sarbanes–Oxley Act of 2002)
+    > US federal law mandates certain practices in financial record keeping and reporting for corporations
+    > strong internal control processes over IT infrastructure and applications that house the financial information that flows into its financial reports in order to enable them to make timely disclosures to the public if a breach were to occur
+  
+  
