@@ -1,0 +1,13 @@
+> set Target to Scan
+> run Basic Scan
+  > Sev - Serverity Level
+> Report as format pdf, html or csv
+
+> new scan
+  > advanced scan
+    > Name, Description, Target
+    > Discovery
+      > TCP Network Scan
+    > Assesments 
+      > Web Applications
+        > Enable generic webapp scan
