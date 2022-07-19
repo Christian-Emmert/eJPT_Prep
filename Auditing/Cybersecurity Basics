@@ -1,0 +1,38 @@
+What is cybercecurity?
+----------------------
+
+> securing:
+  > peronally Identifiable Information
+  > Healthcare Information
+  > Financial Data
+  > Intellectual Property
+  > Business Secrets
+  > Business Operations
+  
+> protecting from:
+  > criminals
+  > competitors
+  > insider threats
+  > malicious actors
+  
+> CIA Triad:
+  > Confidentiality
+    > only for the user, who needs the information to see
+  > Integrity
+    > only authorized changes
+  > Availabilty
+    > available for access
+    
+> Defense in Depth
+  > Layers of protection
+  > physical protection
+  > lock everything important
+  
+> Business Needs
+  > shape to the need of the business to run
+  
+> Risk Management
+  > Cost, to secure something
+  > Insurance
+  > Lawsuit
+  > Property
