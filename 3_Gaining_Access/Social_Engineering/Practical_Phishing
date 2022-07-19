@@ -1,0 +1,32 @@
+GoPhish.exe
+  > start up server
+  > localhost:3333
+  > admin:<password>
+  
+  > sending profiles
+    > name 
+    > from <fake-email address>
+    > host localhost:25
+    > username
+    > password
+    
+    > send test email
+    
+  > landing page
+    > name
+    > import site clones site
+    > capture submitted data <login and password>
+    > redirect to original site
+  
+  > email templates from .eml file
+    > Add Tracking Image
+      > track openend emails
+        > // "display: none" in E-Mail should allways be untrusted
+    
+  > User and Groups
+    > firstname, lastname, Email, Position
+    
+  > Campain
+    > name
+    > URL Hosting Server
+    > Groups
