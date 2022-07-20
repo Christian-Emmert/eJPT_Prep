@@ -1,0 +1,26 @@
+Requirements
+-------
+> gained access to a target network
+> exploit servers, workstations or laptops on the internal network
+> compromised host
+> misconfiguration and inherent vulns
+
+> good understanding of windows and linux on OS / Kernel level
+
+Type of Attacks
+-------
+> Dump Creds
+> Priv Escalation
+> Pass the Hash
+> Exploiting Vulns
+
+Windows
+-------
+> SMB
+> Printers
+> Version and Patches
+
+Linux
+-------
+> LDAP
+> Version and Patches
