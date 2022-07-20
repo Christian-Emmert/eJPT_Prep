@@ -1,0 +1,25 @@
+> market share >= 70% in 2021
+> popularity = target for attackers
+> MS08-067(Conflicker) / MS17-010(EternalBlue)
+
+> older Versions have Vulns, which are fixed in newer versions (EOL of Support)
+> written in C > buffer overflow, arbitrary code execution
+> not configured to run securely after install per default
+> Zero Day not patched immediately by Microsoft / often missed patches
+
+> companies use older versions when new version is released > possibility for atatck surface
+> vulnerable to cross vulns > SQL Injections
+> vulnerable to physical attacks > theft, bad usbs
+
+> Information disclosure - Vulnerability that allows an attacker to access
+  confidential data.
+> Buffer overflows - Caused by a programming error, allows attackers to write data
+  to a buffer and overrun the allocated buffer, consequently writing data to
+  allocated memory addresses.
+> Remote code execution - Vulnerability that allows an attacker to remotely execute
+  code on the target system.
+> Privilege escalation - Vulnerability that allows an attacker to elevate their
+  privileges after initial compromise.
+> Denial of Service (DOS) - Vulnerability that allows an attacker to consume a
+  system/host’s resources (CPU, RAM, Network etc) consequently preventing the
+  system from functioning normally.
